@@ -187,4 +187,22 @@ if (animItems.length > 0) {
 		animOnScroll();
 	}, 500)
 
+};
+
+//=============ScrollWiev=========================
+
+let ScrollWiev = document.querySelector('.header__scroll');
+
+ScrollWiev.addEventListener('click', function () {
+	setScrollWiev();
+	burger.classList.remove('active');
+	menuBurger.classList.remove('active');
+});
+
+function setScrollWiev(top) {
+	const lessoSelected = document.querySelector('.project__title');
+	lessoSelected.scrollIntoView({
+
+		behavior: "smooth"
+	});
 }
